@@ -1,6 +1,6 @@
 from qiskit import *
-provider = IBMQ.enable_account('YOUR API KEY HERE')
-backend = provider.get_backend('ibm_oslo')
+#provider = IBMQ.enable_account('YOUR API KEY HERE')
+#backend = provider.get_backend('ibm_oslo')
 
 def applyHadamard(qc, qubits):
     for q in qubits:
