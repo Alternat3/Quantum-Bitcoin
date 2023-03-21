@@ -19,12 +19,10 @@ class Block:
         self.nonce = prevBlockHashBinary[-3:]
         counter = 0
         avgaccuracy = 0
-        print(chosen_accuracy)
         while(self.accuracy < chosen_accuracy):
             counter = counter + 1
             self.accuracy = mine(self.nonce, type_choice)
             avgaccuracy = avgaccuracy + self.accuracy
-            print("Iteration {} Accuracy: {} ".format(counter,self.accuracy))
         print("Final Accuracy: ", self.accuracy)
         print("Iterations = ", counter)
         avgaccuracy = avgaccuracy / counter
